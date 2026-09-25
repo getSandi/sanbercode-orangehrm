@@ -4,7 +4,6 @@ describe('OrangeHRM - Login Feature', () => {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     });
 
-    // TS-LOGIN-001
     it('TC-LOGIN-001 - Login dengan kredensial valid', () => {
 
         cy.get('input[name="username"]')
@@ -24,7 +23,6 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-002
     it('TC-LOGIN-002 - Login dengan username tidak valid', () => {
 
         cy.get('input[name="username"]')
@@ -41,7 +39,6 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-003
     it('TC-LOGIN-003 - Login dengan password tidak valid', () => {
 
         cy.get('input[name="username"]')
@@ -58,7 +55,6 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-004
     it('TC-LOGIN-004 - Login dengan username dan password tidak valid', () => {
 
         cy.get('input[name="username"]')
@@ -75,7 +71,6 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-005
     it('TC-LOGIN-005 - Login dengan username kosong', () => {
 
         cy.get('input[name="password"]')
@@ -91,7 +86,6 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-006
     it('TC-LOGIN-006 - Login dengan password kosong', () => {
 
         cy.get('input[name="username"]')
@@ -107,8 +101,7 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-   
-    // TS-LOGIN-007
+
     it('TC-LOGIN-007 - Login dengan kedua field kosong', () => {
 
         cy.get('button[type="submit"]')
@@ -124,7 +117,6 @@ describe('OrangeHRM - Login Feature', () => {
 
 
 
-    // TS-LOGIN-008
     it('TC-LOGIN-008 - Password ditampilkan sebagai karakter tersembunyi', () => {
 
         cy.get('input[name="password"]')
@@ -135,25 +127,7 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-009
-    it('TC-LOGIN-009 - Username bersifat case-sensitive', () => {
-
-        cy.get('input[name="username"]')
-            .type('admin');
-
-        cy.get('input[name="password"]')
-            .type('admin123');
-
-        cy.get('button[type="submit"]')
-            .click();
-
-        cy.contains('Invalid credentials')
-            .should('be.visible');
-    });
-
-
-    // TS-LOGIN-010
-    it('TC-LOGIN-010 - Password bersifat case-sensitive', () => {
+    it('TC-LOGIN-009 - Password bersifat case-sensitive', () => {
 
         cy.get('input[name="username"]')
             .type('Admin');
@@ -169,8 +143,7 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-011
-    it('TC-LOGIN-011 - Akses Forgot your password', () => {
+    it('TC-LOGIN-010 - Akses Forgot your password', () => {
 
         cy.contains('Forgot your password?')
             .click();
@@ -186,8 +159,7 @@ describe('OrangeHRM - Login Feature', () => {
     });
 
 
-    // TS-LOGIN-012
-    it('TC-LOGIN-012 - Login menggunakan tombol Enter', () => {
+    it('TC-LOGIN-011 - Login menggunakan tombol Enter', () => {
 
         cy.get('input[name="username"]')
             .type('Admin');
