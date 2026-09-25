@@ -12,6 +12,7 @@ class LoginPage {
     invalidUsername = 'MasSandi';
     invalidPassword = 'MasSandi';
 
+    lowercaseUsername = 'admin';
     uppercasePassword = 'ADMIN123';
 
 
