@@ -23,6 +23,8 @@ describe('OrangeHRM - Login Feature', () => {
 
     it('TC-LOGIN-001 - Login dengan kredensial valid', () => {
 
+     //Note : Setiap case saya berlakukan intercept di before each diataas  
+
         cy.get('input[name="username"]')
             .type('Admin');
 
@@ -37,6 +39,8 @@ describe('OrangeHRM - Login Feature', () => {
 
         cy.contains('Dashboard')
             .should('be.visible');
+
+      //Note : Setiap case saya berlakukan intercept di before each diataas    
     });
 
 
